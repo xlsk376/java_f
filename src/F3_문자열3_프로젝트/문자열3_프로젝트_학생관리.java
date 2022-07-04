@@ -45,20 +45,20 @@ public class 문자열3_프로젝트_학생관리 {
 					if(check == true) {
 						System.out.println("중복");
 					}else {
-						for(int i = 0; i < 5; i++) {
-							dataList[count][i] = "";
-						}
-						count += 1;
-						dataList[count][0] = (th+count) + "";
+						System.out.println("비밀번호를 입력하세요");
+						String pw = scan.next();
+						System.out.println("이름을 입력하세요");
+						String name = scan.next();
+						System.out.println("점수를 입력하세요");
+						String score = scan.next();
+						dataList[count][0] = (th+count+1) + "";
 						dataList[count][1] = id;
+						dataList[count][1] = pw;
+						dataList[count][1] = name;
+						dataList[count][1] = score;
 						System.out.println("가입성공");
+						count += 1;
 						size += 1;
-						for (int i = 0; i < size; i++) {
-							for (int j = 0; j < dataList[i].length; j++) {
-								System.out.print(dataList[i][j]+ " ");
-							}
-							System.out.println();
-						}
 					}
 				}
 
